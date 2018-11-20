@@ -1,0 +1,28 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': isGreen(),
+ 'list-group-item-danger': isRed()}">
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <h4 [ngStyle]="{'color': getColor()}"> <strong>{{title}}</strong></h4>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <i>date {{ created_at | date: "MM/dd/yyyy, h:mm a"}}</i>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <p>test content {{content}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+      <button type="button" class="btn btn-success" (click)="increaseLoveIts()">I love It</button>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+      <button type="button" class="btn btn-danger" (click)="decreaseLoveIts()">I don't like It</button>
+    </div>
+  </div>
+
+</li>
